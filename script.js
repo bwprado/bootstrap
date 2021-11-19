@@ -7,7 +7,7 @@ class Bootstrap extends HTMLElement {
     const head = document.querySelector('head')
     const script = document.createElement('script')
     script.type = 'text/javascript'
-    script.src = ''
+    script.src = 'https://cdn.jsdelivr.net/gh/bwprado/bootstrap@latest/script.js'
 
     head.appendChild(script)
   }
