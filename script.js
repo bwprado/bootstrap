@@ -7,26 +7,26 @@ class Bootstrap extends HTMLElement {
 		const head = document.querySelector('head')
 		const script = document.createElement('script')
 		const link = document.createElement('link')
-		const scriptBody = document.createElement('script')
+		const scriptBootstrap = document.createElement('script')
 		const body = document.querySelector('body')
 		const div = document.createElement('div')
 
 		div.innerHTML = `
-    <div class="btn-group" role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary">Left</button>
-  <button type="button" class="btn btn-primary">Middle</button>
-  <button type="button" class="btn btn-primary">Right</button>
-</div>
+			<div class="btn-group" role="group" aria-label="Basic example">
+				<button type="button" class="btn btn-primary">Left</button>
+				<button type="button" class="btn btn-primary">Middle</button>
+				<button type="button" class="btn btn-primary">Right</button>
+			</div>
     `
 		script.type = 'text/javascript'
 		script.src =
 			'https://cdn.jsdelivr.net/gh/bwprado/bootstrap@latest/script.js'
 
-		scriptBody.type = 'text/javascript'
-		scriptBody.src =
+		scriptBootstrap.type = 'text/javascript'
+		scriptBootstrap.src =
 			'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
-		scriptBody.crossorigin = 'anonymous'
-		scriptBody.integrity =
+		scriptBootstrap.crossorigin = 'anonymous'
+		scriptBootstrap.integrity =
 			'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p'
 
 		link.innerHTML = `
@@ -34,8 +34,8 @@ class Bootstrap extends HTMLElement {
 		`
 
 		head.appendChild(link)
-		head.appendChild(script)
-		body.appendChild(scriptBody)
+		body.appendChild(script)
+		body.appendChild(scriptBootstrap)
 		this.appendChild(div)
 	}
 }
